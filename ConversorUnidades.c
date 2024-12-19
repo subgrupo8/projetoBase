@@ -4,7 +4,7 @@
  * Tarefa: depuração e versionamento
  * Residentes: 
  *  - Lucas Meira de Souza Leite
- *  -  
+ *  - Cauã Gomes Fraga
  *  -  
  *  -  
  *  -   
