@@ -25,8 +25,8 @@ scanf(" %c", &escolha);
         printf("Você escolheu Km/h.\npara qual valor deseja convertê-lo? \na) - m/s \nb) - mph\nEscolha:");
         scanf(" %c", &escolha);
     while(1){
-            if(escolha == 'a' || escolha =='A') {
-                printf("Você escolheu m/s.\nDigite o valor em Km/h ");
+            if(escolha == 'a' || escolha =='A') { //Km/h para m/s.
+                printf("Você escolheu m/s.\nDigite o valor em Km/h: ");
                 scanf("%lf", &kmh);
                 ms = kmh / 3.6;
                 printf("O valor convertido de Km/h para m/s é: %lf", ms);
@@ -34,8 +34,8 @@ scanf(" %c", &escolha);
                 break; 
             }
         
-            else if(escolha == 'b' || escolha == 'B') {
-                printf("Você escolheu mph.\nDigite o valor em Km/h ");
+            else if(escolha == 'b' || escolha == 'B') { //km/h para mph.
+                printf("Você escolheu mph.\nDigite o valor em Km/h: ");
                 scanf("%lf", &kmh);
                 mph = kmh * 0.62137119;
                 printf("O valor convertido de Km/h para mph é: %lf", mph);
@@ -55,8 +55,8 @@ scanf(" %c", &escolha);
         printf("Você escolheu m/s.\npara qual valor deseja convertê-lo? \na) - Kmh/h \nb) - mph\nEscolha: ");
         scanf(" %c", &escolha);
     while(1){         
-             if (escolha == 'a' || escolha =='A'){
-             printf("Você escolheu Km/h.\nDigite o valor em m/s\n");
+             if (escolha == 'a' || escolha =='A'){ //m/s para km/h.
+             printf("Você escolheu Km/h.\nDigite o valor em m/s: ");
              scanf("%lf", &ms);
              kmh = ms * 3.6; 
              printf("O convertido de de m/s para Km/h é: %lf", kmh);
@@ -64,8 +64,8 @@ scanf(" %c", &escolha);
              break;
              }
 
-             else if (escolha == 'b' || escolha == 'B'){
-             printf("Você escolheu mph.\nDigite o valor em m/s\n");
+             else if (escolha == 'b' || escolha == 'B'){ //m/s para mph.
+             printf("Você escolheu mph.\nDigite o valor em m/s: ");
              scanf("%lf", &ms);
              mph = ms * 2.23693629; 
              printf("O convertido de m/s para mph é: %lf", mph);
@@ -82,7 +82,7 @@ scanf(" %c", &escolha);
 
     //Conversões de mph.
 
-    else if (escolha == 'c' || escolha == 'C') {
+    else if (escolha == 'c' || escolha == 'C') { //mph para Km/h.
         printf("Você escolheu mph.\npara qual valor deseja convertê-lo? \na) - Km/h \nb) - m/s\nEscolha:");
         scanf(" %c", &escolha);
     while(1){        
@@ -95,7 +95,7 @@ scanf(" %c", &escolha);
                 break;
                 }
             
-            else if(escolha == 'b' || escolha == 'B'){
+            else if(escolha == 'b' || escolha == 'B'){ //mph para m/s.
                 printf("Você escolheu m/s.\nDigite o valor em mph: ");
                 scanf("%lf", &mph);
                 ms = mph * 0.44704;
