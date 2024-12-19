@@ -1,7 +1,7 @@
 /******************************************************************************
  * Programa desenvolvido colaborativamente pelos residentes do Embarcatech
- * U3 - Linguagens e Ambientes de ProgramaÁ„o
- * Tarefa: depuraÁ„o e versionamento
+ * U3 - Linguagens e Ambientes de Programa√ß√£o
+ * Tarefa: depura√ß√£o e versionamento
  * Residentes: 
  *  - Lucas Meira de Souza Leite
  *  -  
@@ -19,16 +19,18 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h> //Necess·rio para o system("cls")
-#include <locale.h> //Necess·rio para o setlocale
+#include <stdlib.h> //Necess√°rio para o system("cls")
+#include <locale.h> //Necess√°rio para o setlocale
+
+void converter_area();
 
 int main() {
-    setlocale(LC_ALL, "Portuguese_Brazil"); //Necess·rio para exibiÁ„o de palavras com acento
+    setlocale(LC_ALL, "Portuguese_Brazil"); //Necess√°rio para exibi√ß√£o de palavras com acento
     int escolha = 0;
     char continuar = 'N';
     do  
     {
-        system("cls"); //Limpa a tela a cada iteraÁ„o       
+        system("cls"); //Limpa a tela a cada itera√ß√£o       
         printf("********************************************\n");
         printf("***         Conversor de Unidades        ***\n");
         printf("********************************************\n");        
@@ -42,44 +44,100 @@ int main() {
         printf(" 8 - Unidades de tempo                      \n");        
         printf(" 9 - Unidades de armazenamento              \n");                                
         printf("********************************************\n");                
-        printf("Escolha uma opÁ„o:      ");
+        printf("Escolha uma op√ß√£o:      ");
         scanf("%d", &escolha);
 
         switch (escolha) {
             case 1:
-                //chamada da funÁ„o
+                //chamada da fun√ß√£o
                 break;
             case 2:
-                //chamada da funÁ„o
+                //chamada da fun√ß√£o
                 break;
             case 3:
-                //chamada da funÁ„o
+                //chamada da fun√ß√£o
                 break;
             case 4:
-                //chamada da funÁ„o
+                //chamada da fun√ß√£o
                 break;
             case 5:
-                //chamada da funÁ„o
+                //chamada da fun√ß√£o
                 break;
             case 6:
-                //chamada da funÁ„o
+                //chamada da fun√ß√£o
                 break;
             case 7:
-                //chamada da funÁ„o
+                converter_area();
                 break;
             case 8:
-                //chamada da funÁ„o
+                //chamada da fun√ß√£o
                 break;
             case 9:
-                //chamada da funÁ„o
+                //chamada da fun√ß√£o
                 break;
             default:
-                printf("OpÁ„o inv·lida.\n");
+                printf("Op√ß√£o inv√°lida.\n");
         }
-        printf("\nDeseja escolher outra opÁ„o? (S/N)");
-        scanf(" %c", &continuar); //O espaÁo antes de %c È necess·rio para ignorar espaÁos em branco e realmente ler a vari·vel
+        printf("\nDeseja escolher outra op√ß√£o? (S/N)");
+        scanf(" %c", &continuar); //O espa√ßo antes de %c √© necess√°rio para ignorar espa√ßos em branco e realmente ler a vari√°vel
     } while ((continuar == 'S') || (continuar == 's'));
 
     return 0;
     system("PAUSE");
+}
+
+
+
+
+void converter_area() {
+        int opcao = 0;
+    float valor, resultado;
+
+    printf("Escolha a convers√£o desejada:\n");
+    printf("1 - Metros quadrados para quil√¥metros quadrados\n");
+    printf("2 - Metros quadrados para hectares\n");
+    printf("3 - Metros quadrados para acres\n");
+    printf("4 - Quil√¥metros quadrados para metros quadrados\n");
+    printf("5 - Hectares para metros quadrados\n");
+    printf("6 - Acres para metros quadrados\n");
+    printf("Escolha uma op√ß√£o: ");
+    scanf("%d", &opcao);
+
+    printf("Digite o valor a ser convertido: ");
+    scanf("%f", &valor);
+
+    switch(opcao) {
+        case 1:
+        resultado = valor / 1000000;
+        printf("%.2f metros quadrados equivalem a %.6f quil√¥metros quadrados.", valor, resultado);
+        break;
+
+        case 2:
+        resultado = valor / 10000;
+        printf("%.4f metros quadrados equivalem a %.4f hectares.", valor, resultado);
+        break;
+
+        case 3:
+        resultado = valor / 4047;
+        printf("%.4f metros quadrados equivalem a %.4f acres.", valor, resultado);
+        break;
+
+        case 4:
+        resultado = valor * 1000000;
+        printf("%.2f quil√¥metros quadrados equivalem a %.2f metros quadrados.", valor, resultado);
+        break;
+
+        case 5:
+        resultado = valor * 10000;
+        printf("%.2f hectares equivalem a %.2f metros quadrados.", valor, resultado);
+        break;
+
+        case 6:
+        resultado = valor * 4047;
+        printf("%.2f acres equivalem a %.2f metros quadrados.", valor, resultado);
+        break;
+
+        default:
+        printf("Op√ß√£o inv√°lida.");
+    }    
 }
