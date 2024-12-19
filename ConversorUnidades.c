@@ -22,9 +22,15 @@
 #include <stdlib.h> //Necessário para o system("cls")
 #include <locale.h> //Necessário para o setlocale
 
+void converte_m_para_cm(float comprimento);
+void converte_m_para_km(float comprimento);
+void converte_cm_para_m(float comprimento);
+void converte_km_para_m(float comprimento);
+
 int main() {
     setlocale(LC_ALL, "Portuguese_Brazil"); //Necessário para exibição de palavras com acento
     int escolha = 0;
+    float comprimento = 0;
     char continuar = 'N';
     do  
     {
@@ -47,7 +53,40 @@ int main() {
 
         switch (escolha) {
             case 1:
-                //chamada da função
+                system("cls");
+                printf("Escolha a conversão desejada:\n"); 
+                printf("1. Km para M\n"); 
+                printf("2. M para Km\n"); 
+                printf("3. Cm para M\n"); 
+                printf("4. M para Cm\n"); 
+                printf("Digite a sua escolha:   "); 
+                scanf("%d", &escolha); 
+
+                switch (escolha) {
+                case 1:
+                    printf("Digite o valor a ser convertido:    "); 
+                    scanf("%f", &comprimento);
+                    converte_km_para_m(comprimento);
+                    break;
+                case 2:
+                    printf("Digite o valor a ser convertido:    "); 
+                    scanf("%f", &comprimento);
+                    converte_m_para_km(comprimento);
+                    break;
+                case 3:
+                    printf("Digite o valor a ser convertido:    "); 
+                    scanf("%f", &comprimento);
+                    converte_cm_para_m(comprimento);
+                    break;
+                case 4:
+                    printf("Digite o valor a ser convertido:    "); 
+                    scanf("%f", &comprimento);
+                    converte_m_para_cm(comprimento);
+                    break;                
+                default:
+                    printf("Opção inválida.\n");
+                    break;
+                }
                 break;
             case 2:
                 //chamada da função
@@ -82,4 +121,18 @@ int main() {
 
     return 0;
     system("PAUSE");
+}
+
+// Implementação das funções relativas a comprimento.
+void converte_m_para_cm(float comprimento){
+    printf("%.3f M = %.3f Cm\n", comprimento, comprimento * 100);
+}
+void converte_m_para_km(float comprimento){
+    printf("%.3f M = %.3f Km\n", comprimento, comprimento / 1000);    
+}
+void converte_cm_para_m(float comprimento){
+    printf("%.3f Cm = %.3f M\n", comprimento, comprimento / 100);
+}
+void converte_km_para_m(float comprimento){
+    printf("%.3f Km = %.3f M\n", comprimento, comprimento * 1000);
 }
