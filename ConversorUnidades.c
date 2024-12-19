@@ -83,6 +83,7 @@ int main() {
     } while ((continuar == 'S') || (continuar == 's'));
 
     return 0;
+    system("PAUSE");
 }
 
 double converterEnergia(double valor, char unidadeDe[], char unidadePara[]) {
