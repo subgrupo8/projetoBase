@@ -1,30 +1,16 @@
 # projetoBase
 
-projetoBase
 Projeto base em C para desenvolvimento.
-Como usar
 
-Clone o repositório
-Compile o programa:
+## Como usar
 
-bashCopygcc main.c -o programa
+1. Clone o repositório
+2. Compile o programa:
+```bash
+gcc main.c -o programa
 
-Execute:
+./programa
 
-bashCopy./programa
-Estrutura
-CopyprojetoBase/
-│
-├── main.c          # Arquivo principal
-└── README.md       # Este arquivo
-Contribuindo
-Para contribuir:
-
-Faça um Fork
-Crie sua branch (git checkout -b feature/nova-funcionalidade)
-Commit (git commit -m 'Nova funcionalidade')
-Push (git push origin feature/nova-funcionalidade)
-Abra um Pull Request
-
-Licença
-MIT
+projetoBase/
+├── main.c      # Arquivo principal
+└── README.md   # Este arquivo
