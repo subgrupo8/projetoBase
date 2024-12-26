@@ -5,7 +5,7 @@
  * Residentes: 
  *  - Lucas Meira de Souza Leite
  *  - Hugo Martins Santana
- *  -  
+ *  - Jonatan Ramos dos Santos
  *  -  
  *  -   
  *  -   
