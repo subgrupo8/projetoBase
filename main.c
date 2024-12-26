@@ -7,7 +7,7 @@
  *  - Hugo Martins Santana
  *  - Jonatan Ramos dos Santos
  *  - Cauã Gomes Fraga 
- *  -   
+ *  - Lethicia Nascimento de Souza   
  *  -   
  *  -   
  *  -    
