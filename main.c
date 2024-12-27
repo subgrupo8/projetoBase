@@ -14,7 +14,6 @@
  *  -
  *******************************************************************************/
 
-
 /*
     Programa para realizar conversor de unidades de comprimento, massa, volume, entre outros
 */
@@ -292,7 +291,10 @@ void conversorTemperatura()
     printf("1 - Celsius para Fahrenheit\n");
     printf("2 - Celsius para Kelvin\n");
     printf("3 - Fahrenheit para Celsius\n");
-    printf("4 - Kelvin para Celsius\n");
+    printf("4 - Fahrenheit para Kelvin\n");
+    printf("5 - Kelvin para Celsius\n");
+    printf("6 - Kelvin para Fahrenheit\n");
+
     printf("Escolha uma opção: ");
 
     if (scanf("%d", &escolha) != 1)
@@ -325,8 +327,16 @@ void conversorTemperatura()
         printf("%.2lf °F equivalem a %.2lf °C\n", valor, resultado);
         break;
     case 4:
+        resultado = (valor - 32) * 5 / 9 + 273;
+        printf("%.2lf °F equivalem a %.2lf K\n", valor, resultado);
+        break;
+    case 5:
         resultado = valor - 273.15;
         printf("%.2lf K equivalem a %.2lf °C\n", valor, resultado);
+        break;
+    case 6:
+        resultado = (valor - 273.15) * 9 / 5 + 32;
+        printf("%.2lf K equivalem a %.2lf °F\n", valor, resultado);
         break;
     default:
         printf("Opção inválida.\n");
