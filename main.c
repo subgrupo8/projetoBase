@@ -8,10 +8,11 @@
  *  - Jonatan Ramos dos Santos
  *  - Cauã Gomes Fraga
  *  - Lethicia Nascimento de Souza
+ *  - Allef Silva Imbassahy
  *  - Ruth Coelho Ferreira
  *  - Josemar Rocha Pedroso
- *  -
- *  -
+ *  - Maria Clara Simoes de Jesus
+ *  
  *******************************************************************************/
 
 /*
