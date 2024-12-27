@@ -49,7 +49,11 @@ O programa permite realizar conversões entre várias unidades de medida. As cat
 8 - Tempo
 9 - Armazenamento
 
+<<<<<<< HEAD
 ## Utilização do Programa
+=======
+Utilização do Programa
+>>>>>>> 27ecf903c82b9d123214f61e1105974f62d71e5a
 
 Ao executar o programa, você verá um menu principal com opções como:
 
@@ -57,7 +61,11 @@ Ao executar o programa, você verá um menu principal com opções como:
 2 - Insira a medida e a unidade de destino conforme solicitado.
 3 - O resultado será exibido no terminal.
 
+<<<<<<< HEAD
 ## Exemplo de Execução:
+=======
+Exemplo de Execução:
+>>>>>>> 27ecf903c82b9d123214f61e1105974f62d71e5a
 
 
 ********************************************
@@ -65,6 +73,10 @@ Ao executar o programa, você verá um menu principal com opções como:
 ********************************************
  1 - Unidades de comprimento
  2 - Sair
+<<<<<<< HEAD
+=======
+
+>>>>>>> 27ecf903c82b9d123214f61e1105974f62d71e5a
  Escolha uma opção: 1
 
 Após escolher a categoria, o programa apresenta as opções de conversão disponíveis:
