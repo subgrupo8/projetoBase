@@ -63,7 +63,7 @@ int main(void)
         printf(" 8 - Unidades de tempo\n");
         printf(" 9 - Unidades de armazenamento\n");
         printf("********************************************\n");
-        printf("Escolha uma opção: ");
+        printf("Escolha uma opcao: ");
 
         if (scanf("%d", &escolha) != 1)
         {
@@ -102,7 +102,7 @@ int main(void)
             conversorArmazenamento();
             break;
         default:
-            printf("Opção inválida.\n");
+            printf("Opacao invalida.\n");
         }
 
         do
@@ -135,13 +135,13 @@ void conversorComprimento()
     printf("********************************************\n");
     printf("1 - Metros para Quilometros\n");
     printf("2 - Metros para Centimetros\n");
-    printf("3 - Quilômetros para Metros\n");
-    printf("4 - Centímetros para Metros\n");
-    printf("Escolha uma opção: ");
+    printf("3 - Quilometros para Metros\n");
+    printf("4 - Centimetros para Metros\n");
+    printf("Escolha uma Opacao: ");
 
     if (scanf("%d", &escolha) != 1)
     {
-        printf("Entrada inválida. Por favor, digite um numero.\n");
+        printf("Entrada invalida. Por favor, digite um numero.\n");
         limparBuffer();
         return;
     }
@@ -189,7 +189,7 @@ void conversorMassa()
     printf("2 - Quilogramas para Toneladas\n");
     printf("3 - Gramas para Quilogramas\n");
     printf("4 - Toneladas para Quilogramas\n");
-    printf("Escolha uma opção: ");
+    printf("Escolha uma Opacao: ");
 
     if (scanf("%d", &escolha) != 1)
     {
@@ -277,7 +277,7 @@ void conversorVolume()
         printf("%.2lf metros cubicos equivalem a %.2lf litros\n", valor, resultado);
         break;
     default:
-        printf("Opção inválida.\n");
+        printf("Opacao invalida.\n");
     }
 }
 
@@ -296,7 +296,7 @@ void conversorTemperatura()
     printf("5 - Kelvin para Celsius\n");
     printf("6 - Kelvin para Fahrenheit\n");
 
-    printf("Escolha uma opção: ");
+    printf("Escolha uma Opacao: ");
 
     if (scanf("%d", &escolha) != 1)
     {
@@ -340,7 +340,7 @@ void conversorTemperatura()
         printf("%.2lf K equivalem a %.2lf °F\n", valor, resultado);
         break;
     default:
-        printf("Opção inválida.\n");
+        printf("Opacao invalida.\n");
     }
 }
 
@@ -356,7 +356,7 @@ void conversorVelocidade()
     printf("2 - m/s para Km/h\n");
     printf("3 - Km/h para Milhas/h\n");
     printf("4 - Milhas/h para Km/h\n");
-    printf("Escolha uma opção: ");
+    printf("Escolha uma Opacao: ");
 
     if (scanf("%d", &escolha) != 1)
     {
@@ -392,7 +392,7 @@ void conversorVelocidade()
         printf("%.2lf milhas/h equivalem a %.2lf km/h\n", valor, resultado);
         break;
     default:
-        printf("Opção invalida.\n");
+        printf("Opacao invalida.\n");
     }
 }
 
@@ -408,7 +408,7 @@ void conversorEnergia()
     printf("2 - Calorias para Joules\n");
     printf("3 - Joules para Quilowatt-hora\n");
     printf("4 - Quilowatt-hora para Joules\n");
-    printf("Escolha uma opção: ");
+    printf("Escolha uma Opacao: ");
 
     if (scanf("%d", &escolha) != 1)
     {
@@ -444,7 +444,7 @@ void conversorEnergia()
         printf("%.2lf kWh equivalem a %.2lf joules\n", valor, resultado);
         break;
     default:
-        printf("Opção invalida.\n");
+        printf("Opacao invalida.\n");
     }
 }
 
@@ -460,7 +460,7 @@ void conversorArea()
     printf("2 - Metros quadrados para Hectares\n");
     printf("3 - Hectares para Metros quadrados\n");
     printf("4 - Quilometros quadrados para Metros quadrados\n");
-    printf("Escolha uma opção: ");
+    printf("Escolha uma Opacao: ");
 
     if (scanf("%d", &escolha) != 1)
     {
@@ -496,7 +496,7 @@ void conversorArea()
         printf("%.2f km² equivalem a %.2f m²\n", valor, resultado);
         break;
     default:
-        printf("Opção invalida.\n");
+        printf("Opacao invalida.\n");
     }
 }
 
@@ -512,7 +512,7 @@ void conversorTempo()
     printf("2 - Minutos para Segundos\n");
     printf("3 - Dias para Horas\n");
     printf("4 - Semanas para Dias\n");
-    printf("Escolha uma opção: ");
+    printf("Escolha uma Opacao: ");
 
     if (scanf("%d", &escolha) != 1)
     {
@@ -548,7 +548,7 @@ void conversorTempo()
         printf("%.2f semanas equivalem a %.2f dias\n", valor, resultado);
         break;
     default:
-        printf("Opção inválida.\n");
+        printf("Opacao invalida.\n");
     }
 }
 
@@ -564,7 +564,7 @@ void conversorArmazenamento()
     printf("2 - Gigabytes para Terabytes\n");
     printf("3 - Kilobytes para Megabytes\n");
     printf("4 - Bytes para Kilobytes\n");
-    printf("Escolha uma opção: ");
+    printf("Escolha uma Opacao: ");
 
     if (scanf("%d", &escolha) != 1)
     {
@@ -600,6 +600,6 @@ void conversorArmazenamento()
         printf("%.2f bytes equivalem a %.4f KB\n", valor, resultado);
         break;
     default:
-        printf("Opção inválida.\n");
+        printf("Opacao invalida.\n");
     }
 }
