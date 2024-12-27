@@ -2,17 +2,18 @@
  * Programa desenvolvido colaborativamente pelos residentes do Embarcatech
  * U3 - Linguagens e Ambientes de Programaçao
  * Tarefa: depuração e versionamento
- * Residentes: 
+ * Residentes:
  *  - Lucas Meira de Souza Leite
  *  - Hugo Martins Santana
  *  - Jonatan Ramos dos Santos
- *  - Cauã Gomes Fraga 
- *  -   
- *  -   
- *  -   
- *  -    
+ *  - Cauã Gomes Fraga
+ *  - Lethicia Nascimento de Souza
+ *  - Ruth Coelho Ferreira
  *  - Josemar Rocha Pedroso
- *******************************************************************************/ 
+ *  -
+ *  -
+ *******************************************************************************/
+
 
 /*
     Programa para realizar conversor de unidades de comprimento, massa, volume, entre outros
@@ -34,18 +35,20 @@ void conversorArmazenamento(void);
 void conversorTemperatura(void);
 void limparBuffer(void);
 
-int main(void) {
+int main(void)
+{
     setlocale(LC_ALL, "Portuguese_Brazil");
     setlocale(LC_NUMERIC, "C");
     int escolha = 0;
     char continuar;
 
-    do {
-        #ifdef _WIN32
-            system("cls");
-        #else
-            system("clear");
-        #endif
+    do
+    {
+#ifdef _WIN32
+        system("cls");
+#else
+        system("clear");
+#endif
 
         printf("********************************************\n");
         printf("***         Conversor de Unidades        ***\n");
@@ -61,46 +64,49 @@ int main(void) {
         printf(" 9 - Unidades de armazenamento\n");
         printf("********************************************\n");
         printf("Escolha uma opção: ");
-        
-        if (scanf("%d", &escolha) != 1) {
+
+        if (scanf("%d", &escolha) != 1)
+        {
             printf("Entrada invalida. Por favor, digite um numero.\n");
             limparBuffer();
             continue;
         }
 
-        switch (escolha) {
-            case 1:
-                conversorComprimento();
-                break;
-            case 2:
-                conversorMassa();
-                break;
-            case 3:
-                conversorVolume();
-                break;
-            case 4:
-                conversorTemperatura();
-                break;
-            case 5:
-                conversorVelocidade();
-                break;
-            case 6:
-                conversorEnergia();
-                break;
-            case 7:
-                conversorArea();
-                break;
-            case 8:
-                conversorTempo();
-                break;
-            case 9:
-                conversorArmazenamento();
-                break;
-            default:
-                printf("Opção inválida.\n");
+        switch (escolha)
+        {
+        case 1:
+            conversorComprimento();
+            break;
+        case 2:
+            conversorMassa();
+            break;
+        case 3:
+            conversorVolume();
+            break;
+        case 4:
+            conversorTemperatura();
+            break;
+        case 5:
+            conversorVelocidade();
+            break;
+        case 6:
+            conversorEnergia();
+            break;
+        case 7:
+            conversorArea();
+            break;
+        case 8:
+            conversorTempo();
+            break;
+        case 9:
+            conversorArmazenamento();
+            break;
+        default:
+            printf("Opção inválida.\n");
         }
 
-        do {
+        do
+        {
             printf("\nDeseja escolher outra opcao? (S/N): ");
             limparBuffer();
             scanf(" %c", &continuar);
@@ -112,12 +118,15 @@ int main(void) {
     return 0;
 }
 
-void limparBuffer() {
+void limparBuffer()
+{
     int c;
-    while ((c = getchar()) != '\n' && c != EOF);
+    while ((c = getchar()) != '\n' && c != EOF)
+        ;
 }
 
-void conversorComprimento() {
+void conversorComprimento()
+{
     int escolha;
     double valor, resultado;
 
@@ -129,43 +138,47 @@ void conversorComprimento() {
     printf("3 - Quilômetros para Metros\n");
     printf("4 - Centímetros para Metros\n");
     printf("Escolha uma opção: ");
-    
-    if (scanf("%d", &escolha) != 1) {
+
+    if (scanf("%d", &escolha) != 1)
+    {
         printf("Entrada inválida. Por favor, digite um numero.\n");
         limparBuffer();
         return;
     }
 
     printf("Digite o valor: ");
-    if (scanf("%lf", &valor) != 1) {
+    if (scanf("%lf", &valor) != 1)
+    {
         printf("Entrada invalida. Por favor, digite um numero.\n");
         limparBuffer();
         return;
     }
 
-    switch (escolha) {
-        case 1:
-            resultado = valor / 1000;
-            printf("%.2lf metros equivalem a %.2lf quilometros\n", valor, resultado);
-            break;
-        case 2:
-            resultado = valor * 100;
-            printf("%.2lf metros equivalem a %.2lf centometros\n", valor, resultado);
-            break;
-        case 3:
-            resultado = valor * 1000;
-            printf("%.2lf quilometros equivalem a %.2lf metros\n", valor, resultado);
-            break;
-        case 4:
-            resultado = valor / 100;
-            printf("%.2lf centimetros equivalem a %.2lf metros\n", valor, resultado);
-            break;
-        default:
-            printf("Opcao invalida.\n");
+    switch (escolha)
+    {
+    case 1:
+        resultado = valor / 1000;
+        printf("%.2lf metros equivalem a %.2lf quilometros\n", valor, resultado);
+        break;
+    case 2:
+        resultado = valor * 100;
+        printf("%.2lf metros equivalem a %.2lf centometros\n", valor, resultado);
+        break;
+    case 3:
+        resultado = valor * 1000;
+        printf("%.2lf quilometros equivalem a %.2lf metros\n", valor, resultado);
+        break;
+    case 4:
+        resultado = valor / 100;
+        printf("%.2lf centimetros equivalem a %.2lf metros\n", valor, resultado);
+        break;
+    default:
+        printf("Opcao invalida.\n");
     }
 }
 
-void conversorMassa() {
+void conversorMassa()
+{
     int escolha;
     double valor, resultado;
 
@@ -177,43 +190,47 @@ void conversorMassa() {
     printf("3 - Gramas para Quilogramas\n");
     printf("4 - Toneladas para Quilogramas\n");
     printf("Escolha uma opção: ");
-    
-    if (scanf("%d", &escolha) != 1) {
+
+    if (scanf("%d", &escolha) != 1)
+    {
         printf("Entrada invalida. Por favor, digite um numero.\n");
         limparBuffer();
         return;
     }
 
     printf("Digite o valor: ");
-    if (scanf("%lf", &valor) != 1) {
+    if (scanf("%lf", &valor) != 1)
+    {
         printf("Entrada invalida. Por favor, digite um numero.\n");
         limparBuffer();
         return;
     }
 
-    switch (escolha) {
-        case 1:
-            resultado = valor * 1000;
-            printf("%.2lf quilogramas equivalem a %.2lf gramas\n", valor, resultado);
-            break;
-        case 2:
-            resultado = valor / 1000;
-            printf("%.2lf quilogramas equivalem a %.2lf toneladas\n", valor, resultado);
-            break;
-        case 3:
-            resultado = valor / 1000;
-            printf("%.2lf gramas equivalem a %.2lf quilogramas\n", valor, resultado);
-            break;
-        case 4:
-            resultado = valor * 1000;
-            printf("%.2lf toneladas equivalem a %.2lf quilogramas\n", valor, resultado);
-            break;
-        default:
-            printf("Opcao invalida.\n");
+    switch (escolha)
+    {
+    case 1:
+        resultado = valor * 1000;
+        printf("%.2lf quilogramas equivalem a %.2lf gramas\n", valor, resultado);
+        break;
+    case 2:
+        resultado = valor / 1000;
+        printf("%.2lf quilogramas equivalem a %.2lf toneladas\n", valor, resultado);
+        break;
+    case 3:
+        resultado = valor / 1000;
+        printf("%.2lf gramas equivalem a %.2lf quilogramas\n", valor, resultado);
+        break;
+    case 4:
+        resultado = valor * 1000;
+        printf("%.2lf toneladas equivalem a %.2lf quilogramas\n", valor, resultado);
+        break;
+    default:
+        printf("Opcao invalida.\n");
     }
 }
 
-void conversorVolume() {
+void conversorVolume()
+{
     int escolha;
     double valor, resultado;
 
@@ -225,43 +242,47 @@ void conversorVolume() {
     printf("3 - Mililitros para Litros\n");
     printf("4 - Metros Cúbicos para Litros\n");
     printf("Escolha uma opcao: ");
-    
-    if (scanf("%d", &escolha) != 1) {
+
+    if (scanf("%d", &escolha) != 1)
+    {
         printf("Entrada invalida. Por favor, digite um numero.\n");
         limparBuffer();
         return;
     }
 
     printf("Digite o valor: ");
-    if (scanf("%lf", &valor) != 1) {
+    if (scanf("%lf", &valor) != 1)
+    {
         printf("Entrada inválida. Por favor, digite um numero.\n");
         limparBuffer();
         return;
     }
 
-    switch (escolha) {
-        case 1:
-            resultado = valor * 1000;
-            printf("%.2lf litros equivalem a %.2lf mililitros\n", valor, resultado);
-            break;
-        case 2:
-            resultado = valor / 1000;
-            printf("%.2lf litros equivalem a %.6lf metros cúbicos\n", valor, resultado);
-            break;
-        case 3:
-            resultado = valor / 1000;
-            printf("%.2lf mililitros equivalem a %.2lf litros\n", valor, resultado);
-            break;
-        case 4:
-            resultado = valor * 1000;
-            printf("%.2lf metros cubicos equivalem a %.2lf litros\n", valor, resultado);
-            break;
-        default:
-            printf("Opção inválida.\n");
+    switch (escolha)
+    {
+    case 1:
+        resultado = valor * 1000;
+        printf("%.2lf litros equivalem a %.2lf mililitros\n", valor, resultado);
+        break;
+    case 2:
+        resultado = valor / 1000;
+        printf("%.2lf litros equivalem a %.6lf metros cúbicos\n", valor, resultado);
+        break;
+    case 3:
+        resultado = valor / 1000;
+        printf("%.2lf mililitros equivalem a %.2lf litros\n", valor, resultado);
+        break;
+    case 4:
+        resultado = valor * 1000;
+        printf("%.2lf metros cubicos equivalem a %.2lf litros\n", valor, resultado);
+        break;
+    default:
+        printf("Opção inválida.\n");
     }
 }
 
-void conversorTemperatura() {
+void conversorTemperatura()
+{
     int escolha;
     double valor, resultado;
 
@@ -273,43 +294,47 @@ void conversorTemperatura() {
     printf("3 - Fahrenheit para Celsius\n");
     printf("4 - Kelvin para Celsius\n");
     printf("Escolha uma opção: ");
-    
-    if (scanf("%d", &escolha) != 1) {
+
+    if (scanf("%d", &escolha) != 1)
+    {
         printf("Entrada invalida. Por favor, digite um número.\n");
         limparBuffer();
         return;
     }
 
     printf("Digite o valor: ");
-    if (scanf("%lf", &valor) != 1) {
+    if (scanf("%lf", &valor) != 1)
+    {
         printf("Entrada invalida. Por favor, digite um número.\n");
         limparBuffer();
         return;
     }
 
-    switch (escolha) {
-        case 1:
-            resultado = (valor * 9/5) + 32;
-            printf("%.2lf °C equivalem a %.2lf °F\n", valor, resultado);
-            break;
-        case 2:
-            resultado = valor + 273.15;
-            printf("%.2lf °C equivalem a %.2lf K\n", valor, resultado);
-            break;
-        case 3:
-            resultado = (valor - 32) * 5/9;
-            printf("%.2lf °F equivalem a %.2lf °C\n", valor, resultado);
-            break;
-        case 4:
-            resultado = valor - 273.15;
-            printf("%.2lf K equivalem a %.2lf °C\n", valor, resultado);
-            break;
-        default:
-            printf("Opção inválida.\n");
+    switch (escolha)
+    {
+    case 1:
+        resultado = (valor * 9 / 5) + 32;
+        printf("%.2lf °C equivalem a %.2lf °F\n", valor, resultado);
+        break;
+    case 2:
+        resultado = valor + 273.15;
+        printf("%.2lf °C equivalem a %.2lf K\n", valor, resultado);
+        break;
+    case 3:
+        resultado = (valor - 32) * 5 / 9;
+        printf("%.2lf °F equivalem a %.2lf °C\n", valor, resultado);
+        break;
+    case 4:
+        resultado = valor - 273.15;
+        printf("%.2lf K equivalem a %.2lf °C\n", valor, resultado);
+        break;
+    default:
+        printf("Opção inválida.\n");
     }
 }
 
-void conversorVelocidade() {
+void conversorVelocidade()
+{
     int escolha;
     double valor, resultado;
 
@@ -321,43 +346,47 @@ void conversorVelocidade() {
     printf("3 - Km/h para Milhas/h\n");
     printf("4 - Milhas/h para Km/h\n");
     printf("Escolha uma opção: ");
-    
-    if (scanf("%d", &escolha) != 1) {
+
+    if (scanf("%d", &escolha) != 1)
+    {
         printf("Entrada invalida. Por favor, digite um numero.\n");
         limparBuffer();
         return;
     }
 
     printf("Digite o valor: ");
-    if (scanf("%lf", &valor) != 1) {
+    if (scanf("%lf", &valor) != 1)
+    {
         printf("Entrada invalida. Por favor, digite um numero.\n");
         limparBuffer();
         return;
     }
 
-    switch (escolha) {
-        case 1:
-            resultado = valor / 3.6;
-            printf("%.2lf km/h equivalem a %.2lf m/s\n", valor, resultado);
-            break;
-        case 2:
-            resultado = valor * 3.6;
-            printf("%.2lf m/s equivalem a %.2lf km/h\n", valor, resultado);
-            break;
-        case 3:
-            resultado = valor / 1.609;
-            printf("%.2lf km/h equivalem a %.2lf milhas/h\n", valor, resultado);
-            break;
-        case 4:
-            resultado = valor * 1.609;
-            printf("%.2lf milhas/h equivalem a %.2lf km/h\n", valor, resultado);
-            break;
-        default:
-            printf("Opção invalida.\n");
+    switch (escolha)
+    {
+    case 1:
+        resultado = valor / 3.6;
+        printf("%.2lf km/h equivalem a %.2lf m/s\n", valor, resultado);
+        break;
+    case 2:
+        resultado = valor * 3.6;
+        printf("%.2lf m/s equivalem a %.2lf km/h\n", valor, resultado);
+        break;
+    case 3:
+        resultado = valor / 1.609;
+        printf("%.2lf km/h equivalem a %.2lf milhas/h\n", valor, resultado);
+        break;
+    case 4:
+        resultado = valor * 1.609;
+        printf("%.2lf milhas/h equivalem a %.2lf km/h\n", valor, resultado);
+        break;
+    default:
+        printf("Opção invalida.\n");
     }
 }
 
-void conversorEnergia() {
+void conversorEnergia()
+{
     int escolha;
     double valor, resultado;
 
@@ -369,43 +398,47 @@ void conversorEnergia() {
     printf("3 - Joules para Quilowatt-hora\n");
     printf("4 - Quilowatt-hora para Joules\n");
     printf("Escolha uma opção: ");
-    
-    if (scanf("%d", &escolha) != 1) {
+
+    if (scanf("%d", &escolha) != 1)
+    {
         printf("Entrada inválida. Por favor, digite um número.\n");
         limparBuffer();
         return;
     }
 
     printf("Digite o valor: ");
-    if (scanf("%lf", &valor) != 1) {
+    if (scanf("%lf", &valor) != 1)
+    {
         printf("Entrada invalida. Por favor, digite um numero.\n");
         limparBuffer();
         return;
     }
 
-    switch (escolha) {
-        case 1:
-            resultado = valor / 4.184;
-            printf("%.2lf joules equivalem a %.2lf calorias\n", valor, resultado);
-            break;
-        case 2:
-            resultado = valor * 4.184;
-            printf("%.2lf calorias equivalem a %.2lf joules\n", valor, resultado);
-            break;
-        case 3:
-            resultado = valor / 3600000;
-            printf("%.2lf joules equivalem a %.6lf kWh\n", valor, resultado);
-            break;
-        case 4:
-            resultado = valor * 3600000;
-            printf("%.2lf kWh equivalem a %.2lf joules\n", valor, resultado);
-            break;
-        default:
-            printf("Opção invalida.\n");
+    switch (escolha)
+    {
+    case 1:
+        resultado = valor / 4.184;
+        printf("%.2lf joules equivalem a %.2lf calorias\n", valor, resultado);
+        break;
+    case 2:
+        resultado = valor * 4.184;
+        printf("%.2lf calorias equivalem a %.2lf joules\n", valor, resultado);
+        break;
+    case 3:
+        resultado = valor / 3600000;
+        printf("%.2lf joules equivalem a %.6lf kWh\n", valor, resultado);
+        break;
+    case 4:
+        resultado = valor * 3600000;
+        printf("%.2lf kWh equivalem a %.2lf joules\n", valor, resultado);
+        break;
+    default:
+        printf("Opção invalida.\n");
     }
 }
 
-void conversorArea() {
+void conversorArea()
+{
     int escolha;
     float valor, resultado;
 
@@ -417,43 +450,47 @@ void conversorArea() {
     printf("3 - Hectares para Metros quadrados\n");
     printf("4 - Quilometros quadrados para Metros quadrados\n");
     printf("Escolha uma opção: ");
-    
-    if (scanf("%d", &escolha) != 1) {
+
+    if (scanf("%d", &escolha) != 1)
+    {
         printf("Entrada invalida. Por favor, digite um número.\n");
         limparBuffer();
         return;
     }
 
     printf("Digite o valor: ");
-    if (scanf("%f", &valor) != 1) {
+    if (scanf("%f", &valor) != 1)
+    {
         printf("Entrada invalida. Por favor, digite um numero.\n");
         limparBuffer();
         return;
     }
 
-    switch (escolha) {
-        case 1:
-            resultado = valor / 1000000;
-            printf("%.2f m² equivalem a %.6f km²\n", valor, resultado);
-            break;
-        case 2:
-            resultado = valor / 10000;
-            printf("%.2f m² equivalem a %.4f hectares\n", valor, resultado);
-            break;
-        case 3:
-            resultado = valor * 10000;
-           printf("%.2f hectares equivalem a %.2f m²\n", valor, resultado);
-            break;
-        case 4:
-            resultado = valor * 1000000;
-            printf("%.2f km² equivalem a %.2f m²\n", valor, resultado);
-            break;
-        default:
-            printf("Opção invalida.\n");
+    switch (escolha)
+    {
+    case 1:
+        resultado = valor / 1000000;
+        printf("%.2f m² equivalem a %.6f km²\n", valor, resultado);
+        break;
+    case 2:
+        resultado = valor / 10000;
+        printf("%.2f m² equivalem a %.4f hectares\n", valor, resultado);
+        break;
+    case 3:
+        resultado = valor * 10000;
+        printf("%.2f hectares equivalem a %.2f m²\n", valor, resultado);
+        break;
+    case 4:
+        resultado = valor * 1000000;
+        printf("%.2f km² equivalem a %.2f m²\n", valor, resultado);
+        break;
+    default:
+        printf("Opção invalida.\n");
     }
 }
 
-void conversorTempo() {
+void conversorTempo()
+{
     int escolha;
     float valor, resultado;
 
@@ -465,43 +502,47 @@ void conversorTempo() {
     printf("3 - Dias para Horas\n");
     printf("4 - Semanas para Dias\n");
     printf("Escolha uma opção: ");
-    
-    if (scanf("%d", &escolha) != 1) {
+
+    if (scanf("%d", &escolha) != 1)
+    {
         printf("Entrada invalida. Por favor, digite um número.\n");
         limparBuffer();
         return;
     }
 
     printf("Digite o valor: ");
-    if (scanf("%f", &valor) != 1) {
+    if (scanf("%f", &valor) != 1)
+    {
         printf("Entrada invalida. Por favor, digite um número.\n");
         limparBuffer();
         return;
     }
 
-    switch (escolha) {
-        case 1:
-            resultado = valor * 60;
-            printf("%.2f horas equivalem a %.2f minutos\n", valor, resultado);
-            break;
-        case 2:
-            resultado = valor * 60;
-            printf("%.2f minutos equivalem a %.2f segundos\n", valor, resultado);
-            break;
-        case 3:
-            resultado = valor * 24;
-            printf("%.2f dias equivalem a %.2f horas\n", valor, resultado);
-            break;
-        case 4:
-            resultado = valor * 7;
-            printf("%.2f semanas equivalem a %.2f dias\n", valor, resultado);
-            break;
-        default:
-            printf("Opção inválida.\n");
+    switch (escolha)
+    {
+    case 1:
+        resultado = valor * 60;
+        printf("%.2f horas equivalem a %.2f minutos\n", valor, resultado);
+        break;
+    case 2:
+        resultado = valor * 60;
+        printf("%.2f minutos equivalem a %.2f segundos\n", valor, resultado);
+        break;
+    case 3:
+        resultado = valor * 24;
+        printf("%.2f dias equivalem a %.2f horas\n", valor, resultado);
+        break;
+    case 4:
+        resultado = valor * 7;
+        printf("%.2f semanas equivalem a %.2f dias\n", valor, resultado);
+        break;
+    default:
+        printf("Opção inválida.\n");
     }
 }
 
-void conversorArmazenamento() {
+void conversorArmazenamento()
+{
     int escolha;
     float valor, resultado;
 
@@ -513,38 +554,41 @@ void conversorArmazenamento() {
     printf("3 - Kilobytes para Megabytes\n");
     printf("4 - Bytes para Kilobytes\n");
     printf("Escolha uma opção: ");
-    
-    if (scanf("%d", &escolha) != 1) {
+
+    if (scanf("%d", &escolha) != 1)
+    {
         printf("Entrada inválida. Por favor, digite um número.\n");
         limparBuffer();
         return;
     }
 
     printf("Digite o valor: ");
-    if (scanf("%f", &valor) != 1) {
+    if (scanf("%f", &valor) != 1)
+    {
         printf("Entrada invalida. Por favor, digite um numero.\n");
         limparBuffer();
         return;
     }
 
-    switch (escolha) {
-        case 1:
-            resultado = valor / 1024;
-            printf("%.2f MB equivalem a %.4f GB\n", valor, resultado);
-            break;
-        case 2:
-            resultado = valor / 1024;
-            printf("%.2f GB equivalem a %.4f TB\n", valor, resultado);
-            break;
-        case 3:
-            resultado = valor / 1024;
-            printf("%.2f KB equivalem a %.4f MB\n", valor, resultado);
-            break;
-        case 4:
-            resultado = valor / 1024;
-            printf("%.2f bytes equivalem a %.4f KB\n", valor, resultado);
-            break;
-        default:
-            printf("Opção inválida.\n");
+    switch (escolha)
+    {
+    case 1:
+        resultado = valor / 1024;
+        printf("%.2f MB equivalem a %.4f GB\n", valor, resultado);
+        break;
+    case 2:
+        resultado = valor / 1024;
+        printf("%.2f GB equivalem a %.4f TB\n", valor, resultado);
+        break;
+    case 3:
+        resultado = valor / 1024;
+        printf("%.2f KB equivalem a %.4f MB\n", valor, resultado);
+        break;
+    case 4:
+        resultado = valor / 1024;
+        printf("%.2f bytes equivalem a %.4f KB\n", valor, resultado);
+        break;
+    default:
+        printf("Opção inválida.\n");
     }
 }
